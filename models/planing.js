@@ -6,9 +6,8 @@ const planingSchema = new Schema({
         require: true
     },
     status: {
-        type: Boolean,
-        default: true,
-        require: true
+        type: Number,
+        default: 0,
     },
     user: {
         type: Schema.Types.ObjectId,

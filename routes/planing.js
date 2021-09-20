@@ -8,23 +8,23 @@ const router = Router();
 
 router.get('/', getPlanings);
 
+router.post('/', [
+    validJwt,
+    check('date_begin', 'the start date is required').not().isEmpty(),
+    check('date_end', 'the end date is required').not().isEmpty(),
+    check('output_format', 'the output format').not().isEmpty(),
+    check('document_type', 'the type of document').not().isEmpty(),
+    validateFields,
+], updatePlaning);
+
 router.put('/:id', [
     check('id', 'El ID no válido').isMongoId(),
     check('id').custom(existsId),
     validateFields,
 ], updatePlaning);
 
-router.post('/', [
-    check('name', 'el nombre es obligatorio').not().isEmpty(),
-    check('email', 'el email no es valido').isEmail(),
-    check('email').custom(emailExists),
-
-    validateFields,
-], updatePlaning);
-
 router.delete('/:id', [
     validJwt,
-    //isAdminRol,
     check('id', 'El ID no válido').isMongoId(),
     check('id').custom(existsId),
     validateFields,

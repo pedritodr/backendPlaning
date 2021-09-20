@@ -9,7 +9,8 @@ class Server {
         this.port = process.env.PORT;
         this.paths = {
             auth: '/api/auth',
-            categories: '/api/planing',
+            planing: '/api/planing',
+            user: '/api/users',
         }
 
         this.connectionDb();
@@ -25,6 +26,7 @@ class Server {
 
     routers() {
         this.app.use(this.paths.auth, require('../routes/auth'));
+        this.app.use(this.paths.user, require('../routes/users'));
         this.app.use(this.paths.planing, require('../routes/planing'));
     }
 
