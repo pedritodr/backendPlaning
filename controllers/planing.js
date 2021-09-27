@@ -1,5 +1,6 @@
 const { response } = require('express');
 const { Planing } = require('../models');
+const { loadFileHelper } = require('../helpers');
 
 const getPlanings = async(req, res) => {
     const { limit = 5, offset = 0 } = req.query;
@@ -25,9 +26,11 @@ const getPlaningById = async(req, res) => {
 }
 
 const addPlaning = async(req, res = response) => {
-    const { secuential, date_begin, date_end, output_format, document_type, user } = req.body;
-    user = user._id;
-    const planing = new Planing(secuential, date_begin, date_end, output_format, document_type, user);
+
+    const { date_begin, date_end, output_format, document_type } = req.body;
+    const user = req.user._id;
+    const secuential = await loadFileHelper(req.files, ['cvs', 'png'], 'cvss');
+    const planing = new Planing({ secuential, date_begin, date_end, output_format, document_type, user });
     await planing.save();
     return res.json({
         planing

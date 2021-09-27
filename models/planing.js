@@ -33,6 +33,8 @@ const planingSchema = new Schema({
         type: Number,
         require: true
     }
+}, {
+    collection: 'planing'
 });
 planingSchema.methods.toJSON = function() {
     const { __v, _id, status, ...planing } = this.toObject();
