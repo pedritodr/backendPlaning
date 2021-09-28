@@ -1,7 +1,7 @@
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
-const loadFileHelper = (files, extesionsValids = ['cvs', 'png'], folder = '') => {
+const loadFileHelper = (files, extesionsValids = ['csv'], folder = '') => {
     return new Promise((resolve, reject) => {
         const file = files.secuential;
         const stringFile = file.name.split('.');

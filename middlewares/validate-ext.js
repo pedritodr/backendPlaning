@@ -9,7 +9,7 @@ const validateFileExt = (req, res = response, next) => {
             msg: 'no file uploaded'
         });
     }
-    const extesionsValids = ['csv', 'png'];
+    const extesionsValids = ['csv'];
     const extArr = file.split('.');
     const ext = extArr[extArr.length - 1];
     const include = extesionsValids.includes(ext.trim());

@@ -16,6 +16,7 @@ const planingSchema = new Schema({
     },
     date_create: {
         type: Date,
+        default: new Date().toString()
     },
     date_begin: {
         type: Date,
@@ -32,6 +33,10 @@ const planingSchema = new Schema({
     document_type: {
         type: Number,
         require: true
+    },
+    time: {
+        type: Number,
+        default: (new Date()).getTime()
     }
 }, {
     collection: 'planing'

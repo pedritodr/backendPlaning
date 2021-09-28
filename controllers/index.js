@@ -1,11 +1,9 @@
 const AuthC = require('./auth');
-const CategoriesC = require('./categories');
-const ProductsC = require('./products');
 const UsersC = require('./users');
+const createToFileFtp = require('./execute-planing');
 
 module.exports = {
     AuthC,
-    CategoriesC,
-    ProductsC,
-    UsersC
+    UsersC,
+    createToFileFtp
 }

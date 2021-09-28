@@ -29,7 +29,7 @@ const addPlaning = async(req, res = response) => {
 
     const { date_begin, date_end, output_format, document_type } = req.body;
     const user = req.user._id;
-    const secuential = await loadFileHelper(req.files, ['cvs', 'png'], 'cvss');
+    const secuential = await loadFileHelper(req.files, ['csv'], 'cvss');
     const planing = new Planing({ secuential, date_begin, date_end, output_format, document_type, user });
     await planing.save();
     return res.json({
