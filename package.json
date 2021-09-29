@@ -13,6 +13,7 @@
     "dependencies": {
         "app-root-path": "^3.0.0",
         "axios": "^0.21.4",
+        "basic-ftp": "^4.6.6",
         "bcryptjs": "^2.4.3",
         "cloudinary": "^1.25.2",
         "cors": "^2.8.5",
@@ -23,6 +24,7 @@
         "express-validator": "^6.11.1",
         "google-auth-library": "^7.1.0",
         "jsonwebtoken": "^8.5.1",
+        "moment": "^2.29.1",
         "mongoose": "^5.12.11",
         "node-cron": "^3.0.0",
         "nodemon": "^2.0.13",

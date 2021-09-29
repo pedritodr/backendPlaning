@@ -1,18 +1,17 @@
 const path = require('path');
 const { Planing } = require('../models');
-const csv = require('csv-parser')
-const fs = require('fs')
+const csv = require('csv-parser');
+const fs = require('fs');
+const ftp = require("basic-ftp");
 const results = [];
 //WORKER POOL(NODE WORKER_THREAD)
 const workerPool = require("workerpool");
-
 class ProcessToFtp {
 
     static instance;
     active = 'init';
 
     constructor() {
-        console.log(ProcessToFtp.instance)
         if (!!ProcessToFtp.instance) {
             return ProcessToFtp.instance;
         }
@@ -39,23 +38,41 @@ const pool = workerPool.pool(
 const createToFileFtp = async() => {
     try {
         let processToFtp = new ProcessToFtp();
-        console.log("process:" + processToFtp.getActive())
         if (processToFtp.getActive() === 'init') {
-            const planing = await Planing.find({ status: 0 }).sort({ time: 1 }).limit(1);
-            //  console.log(planing)
-            if (planing.length > 0) {
+            const planing = await Planing.findOne({ status: 0 }).sort({ time: 1 }).limit(1);
+            if (planing) {
                 processToFtp.setActive('process');
-                const uploadPath = path.join(__dirname, '../uploads/', 'cvss', planing[0].secuential);
+                await Planing.findByIdAndUpdate(planing._id, { status: 1 }, { new: true });
+                const uploadPath = path.join(__dirname, '../uploads/', 'cvss', planing.secuential);
+                const dateBegin = new Date(planing.date_begin);
+                const dateEnd = new Date(planing.date_end);
+                const nameFolder = `${dateBegin.toISOString().slice(0, 10)}-${dateEnd.toISOString().slice(0, 10)}-${planing._id}`;
+                const clientFtp = new ftp.Client();
+                clientFtp.ftp.verbose = true;
+                try {
+                    await clientFtp.access({
+                        host: process.env.FTPHOST,
+                        user: process.env.FTPUSER,
+                        password: process.env.FTPPASSWORD,
+                        secure: false
+                    });
+                    await clientFtp.ensureDir(nameFolder);
+                } catch (error) {
+                    console.log(error);
+                    throw new Error('Error FTP');
+                }
+                clientFtp.close();
                 fs.createReadStream(uploadPath)
                     .pipe(csv())
                     .on('data', (data) => results.push(data))
                     .on('end', async() => {
+                        console.log(results.length)
                         let arrayChunked = results.length > 0 ? await chunkArray(results, 50) : [];
                         for (const data of arrayChunked) {
                             try {
                                 if (typeof data !== "undefined" && data.length > 0) {
                                     pool
-                                        .exec("pushDocumentToFtp", [data, planing[0]])
+                                        .exec("pushDocumentToFtp", [data, JSON.stringify(planing), nameFolder])
                                         .then(function(result) {})
                                         .catch(function(err) {
                                             console.log(err);
@@ -65,18 +82,16 @@ const createToFileFtp = async() => {
                                 processToFtp.setActive('complete');
                             }
                         }
-                        //console.log(arrayChunked);
                     });
-
 
                 setTimeout(() => {
                     processToFtp.setActive('complete');
                 }, 5000);
 
-                const setIntervalFinish = setInterval(() => {
-                    console.log(pool.stats().pendingTasks);
+                const setIntervalFinish = setInterval(async() => {
                     if (parseInt(pool.stats().pendingTasks) == 0) {
                         clearInterval(setIntervalFinish);
+                        await Planing.findByIdAndUpdate(planing._id, { status: 2 }, { new: true });
                         processToFtp.setActive('complete');
                         pool.terminate();
                     }
@@ -88,13 +103,10 @@ const createToFileFtp = async() => {
             }
         }
 
-
-
     } catch (error) {
         console.log(error)
     }
 }
-
 
 
 const chunkArray = (arr, size) => {
@@ -104,7 +116,6 @@ const chunkArray = (arr, size) => {
     }
     return arrayForChunk;
 };
-
 
 
 module.exports = {

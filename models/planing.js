@@ -31,7 +31,7 @@ const planingSchema = new Schema({
         require: true
     },
     document_type: {
-        type: Number,
+        type: String,
         require: true
     },
     time: {
@@ -42,7 +42,7 @@ const planingSchema = new Schema({
     collection: 'planing'
 });
 planingSchema.methods.toJSON = function() {
-    const { __v, _id, status, ...planing } = this.toObject();
+    const { __v, _id, status, date_create, ...planing } = this.toObject();
     return planing;
 }
 module.exports = model('planing', planingSchema);

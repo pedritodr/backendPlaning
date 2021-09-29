@@ -4,6 +4,7 @@ const cors = require('cors');
 const { dbConnection } = require('../database/config');
 const cron = require('node-cron');
 const axios = require("axios");
+
 const { createToFileFtp } = require('../controllers/execute-planing')
 class Server {
     constructor() {
@@ -31,42 +32,12 @@ class Server {
     cronJobs() {
         //0 *  *  *  *
         //     cron.schedule('*/10 * * * * *', () => {
-        cron.schedule('* * * * *', async() => {
-            console.log('running a task every minute');
-            let bodyParams = {
-                RucEmpresa: "0992153563001",
-                TipoDocumento: "01",
-                Establecimiento: "028",
-                PtoEmision: "102",
-                Secuencial: "000050264",
-                NombreArchivo: "Factura-028-102-000050264",
-                Xml: true,
-                Pdf: false,
-                AnioDocumento: "2021"
-            };
-            //    console.log(bodyParams, process.env.ENDPOINT_API_STUPENDO)
+        /*   cron.schedule('* * * * *', async() => {
+              console.log('running a task every minute');
+              createToFileFtp();
 
-            /*   const resultPetition = await axios.post(
-                  process.env.ENDPOINT_API_STUPENDO,
-                  JSON.stringify(bodyParams)
-              );
-              if (resultPetition.status === 200) {
-
-                  if (resultPetition.data.Resultado) {
-
-
-                      let fechaAutorizacion = resultPetition.data.FechaAutorizacion;
-                      let fechaSplit = fechaAutorizacion.split(' ');
-                      let date = fechaSplit[0];
-                      console.log(date);
-                      console.log(fechaAutorizacion, date)
-                  }
-                  console.log(typeof resultPetition.data);
-              } */
-
-
-            createToFileFtp();
-        });
+          }); */
+        //createToFileFtp();
     }
 
     routers() {
