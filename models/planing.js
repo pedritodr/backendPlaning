@@ -37,6 +37,14 @@ const planingSchema = new Schema({
     time: {
         type: Number,
         default: (new Date()).getTime()
+    },
+    date_process: {
+        type: Date,
+        defaul: ''
+    },
+    date_culminated: {
+        type: Date,
+        defaul: ''
     }
 }, {
     collection: 'planing'

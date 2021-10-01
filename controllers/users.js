@@ -6,7 +6,6 @@ const User = require('../models/user');
 const usersGet = async(req, res = response) => {
     const { limit = 5, offset = 0 } = req.query;
 
-
     const [users, total] = await Promise.all([
         User.find({ status: true })
         .skip(Number(offset))
@@ -16,6 +15,13 @@ const usersGet = async(req, res = response) => {
     res.json({
         total,
         users
+    })
+}
+const getUserById = async(req, res) => {
+    const { id } = req.params;
+    const user = await User.findById(id);
+    res.json({
+        user
     })
 }
 
@@ -58,6 +64,7 @@ const usersPatch = (req, res = response) => {
 
 module.exports = {
     usersGet,
+    getUserById,
     usersPost,
     usersPut,
     usersDelete,
