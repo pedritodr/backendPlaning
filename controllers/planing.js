@@ -46,7 +46,7 @@ const getPlaningById = async(req, res) => {
 
     const { id } = req.params;
     const planing = await Planing.findById(id).populate('user', 'name');
-    res.json(product);
+    res.json(planing);
 }
 
 const addPlaning = async(req, res = response) => {

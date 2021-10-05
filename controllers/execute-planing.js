@@ -2,9 +2,9 @@ const path = require('path');
 const { Planing } = require('../models');
 const csv = require('csv-parser');
 const fs = require('fs');
-const ftp = require("basic-ftp");
-const AWS = require('aws-sdk');
 const results = [];
+//CLIENT LOGGER
+
 //WORKER POOL(NODE WORKER_THREAD)
 const workerPool = require("workerpool");
 class ProcessToFtp {
@@ -44,11 +44,12 @@ const createToFileFtp = async() => {
             if (planing) {
                 processToFtp.setActive('process');
                 const dateProcess = new Date();
-                await Planing.findByIdAndUpdate(planing._id, { status: 1, date_process: dateProcess }, { new: true });
+                //   await Planing.findByIdAndUpdate(planing._id, { status: 1, date_process: dateProcess }, { new: true });
                 const uploadPath = path.join(__dirname, '../uploads/', 'cvss', planing.secuential);
                 const dateBegin = new Date(planing.date_begin);
                 const dateEnd = new Date(planing.date_end);
                 const nameFolder = `${dateBegin.toISOString().slice(0, 10)}-${dateEnd.toISOString().slice(0, 10)}-${planing._id}`;
+
                 fs.createReadStream(uploadPath)
                     .pipe(csv())
                     .on('data', (data) => results.push(data))
@@ -78,7 +79,7 @@ const createToFileFtp = async() => {
                     if (parseInt(pool.stats().pendingTasks) == 0) {
                         clearInterval(setIntervalFinish);
                         const dateFinish = new Date();
-                        await Planing.findByIdAndUpdate(planing._id, { status: 2, date_culminated: dateFinish }, { new: true });
+                        //  await Planing.findByIdAndUpdate(planing._id, { status: 2, date_culminated: dateFinish }, { new: true });
                         processToFtp.setActive('complete');
                         pool.terminate();
                     }

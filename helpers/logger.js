@@ -1,12 +1,9 @@
 require('dotenv').config();
 
 let appRoot = require('app-root-path');
-let winston = require('winston');
-let date = new Date();
-//let formatDate = date.toISOString().slice(0, 10);
 
-const logger = (idPlaning) => {
-    const levels = {
+const levels = () => {
+    return {
         info: 2,
         warn: 1,
         error: 0,
@@ -15,7 +12,10 @@ const logger = (idPlaning) => {
         debug: 5,
         silly: 6
     };
-    let options = {
+}
+
+const options = (idPlaning) => {
+    return {
         fileCombined: {
             level: 'info',
             filename: `${appRoot}/logs/planing-${idPlaning}.log`,
@@ -42,22 +42,9 @@ const logger = (idPlaning) => {
             colorize: true,
         },
     };
-
-    const log = winston.createLogger({
-        levels: levels,
-        format: winston.format.json(),
-        defaultMeta: {
-            service: 'stupendo-worker'
-        },
-        transports: [
-            new winston.transports.File(options.fileCombined),
-            new winston.transports.File(options.fileError)
-        ],
-        exitOnError: false,
-    });
-    return log;
 }
 
-
-
-module.exports = logger;
+module.exports = {
+    options,
+    levels
+}

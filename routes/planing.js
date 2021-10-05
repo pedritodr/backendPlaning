@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
-const { getPlanings, getPlaningsPage, addPlaning, updatePlaning, deletePlaning } = require('../controllers/planing');
+const { getPlanings, getPlaningsPage, addPlaning, updatePlaning, deletePlaning, getPlaningById } = require('../controllers/planing');
 const { existsPlaning, validatePage } = require('../helpers');
 const { validJwt, validateFields, validateFileExt } = require('../middlewares');
 
@@ -8,7 +8,13 @@ const router = Router();
 
 router.get('/', getPlanings);
 
-router.get('/:page', [
+router.get('/:id', [
+    check('id', 'El ID no válido').isMongoId(),
+    check('id').custom(existsPlaning),
+    validateFields,
+], getPlaningById);
+
+router.get('/paginate/:page', [
     check('page', 'the page is required').not().isEmpty(),
     check('page', 'the page has to be a number').isNumeric(),
     check('page').custom(validatePage),
