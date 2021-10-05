@@ -3,6 +3,7 @@ const { Planing } = require('../models');
 const csv = require('csv-parser');
 const fs = require('fs');
 const ftp = require("basic-ftp");
+const AWS = require('aws-sdk');
 const results = [];
 //WORKER POOL(NODE WORKER_THREAD)
 const workerPool = require("workerpool");
@@ -42,31 +43,15 @@ const createToFileFtp = async() => {
             const planing = await Planing.findOne({ status: 0 }).sort({ time: 1 }).limit(1);
             if (planing) {
                 processToFtp.setActive('process');
-                await Planing.findByIdAndUpdate(planing._id, { status: 1 }, { new: true });
+                // await Planing.findByIdAndUpdate(planing._id, { status: 1 }, { new: true });
                 const uploadPath = path.join(__dirname, '../uploads/', 'cvss', planing.secuential);
                 const dateBegin = new Date(planing.date_begin);
                 const dateEnd = new Date(planing.date_end);
                 const nameFolder = `${dateBegin.toISOString().slice(0, 10)}-${dateEnd.toISOString().slice(0, 10)}-${planing._id}`;
-                const clientFtp = new ftp.Client();
-                clientFtp.ftp.verbose = true;
-                try {
-                    await clientFtp.access({
-                        host: process.env.FTPHOST,
-                        user: process.env.FTPUSER,
-                        password: process.env.FTPPASSWORD,
-                        secure: false
-                    });
-                    await clientFtp.ensureDir(nameFolder);
-                } catch (error) {
-                    console.log(error);
-                    throw new Error('Error FTP');
-                }
-                clientFtp.close();
                 fs.createReadStream(uploadPath)
                     .pipe(csv())
                     .on('data', (data) => results.push(data))
                     .on('end', async() => {
-                        console.log(results.length)
                         let arrayChunked = results.length > 0 ? await chunkArray(results, 50) : [];
                         for (const data of arrayChunked) {
                             try {
@@ -91,7 +76,7 @@ const createToFileFtp = async() => {
                 const setIntervalFinish = setInterval(async() => {
                     if (parseInt(pool.stats().pendingTasks) == 0) {
                         clearInterval(setIntervalFinish);
-                        await Planing.findByIdAndUpdate(planing._id, { status: 2 }, { new: true });
+                        // await Planing.findByIdAndUpdate(planing._id, { status: 2 }, { new: true });
                         processToFtp.setActive('complete');
                         pool.terminate();
                     }

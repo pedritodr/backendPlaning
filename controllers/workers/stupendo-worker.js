@@ -3,10 +3,9 @@ const path = require('path');
 const fs = require('fs');
 //ENTIDAD DEL WORKER POOL
 const workerpool = require("workerpool");
-
+const AWS = require('aws-sdk');
 //HTTP CLIENT
 const axios = require("axios");
-const ftp = require("basic-ftp");
 const searchTypeDocument = require('../../helpers/type-documet');
 //CLIENT LOGGER
 //const logger = require("../../config/winston");
@@ -14,14 +13,14 @@ const used = process.memoryUsage();
 
 const pushDocumentToFtp = async(data, planing, nameFolder) => {
     try {
-
+        const AWSBucket = "ec-stupendo-ia";
+        AWS.config.loadFromPath('./s3_config.json');
         planing = JSON.parse(planing);
         const dateBegin = new Date(planing.date_begin);
         const dateEnd = new Date(planing.date_end);
         const year = dateBegin.getFullYear();
         const typeDocumentHelper = searchTypeDocument(planing.document_type);
-        const clientFtp = new ftp.Client();
-        clientFtp.ftp.verbose = true;
+
         for (const da of data) {
             if (typeof da !== "undefined") {
                 let numberDocumentSplit = da.numberDocument.split('-');
@@ -41,7 +40,6 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                         process.env.ENDPOINT_API_STUPENDO,
                         JSON.stringify(bodyParams)
                     );
-
                     if (resultPetition) {
                         if (resultPetition.status === 200) {
                             if (resultPetition.data.Resultado) {
@@ -61,17 +59,36 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                                     const routePath = path.join(__dirname, '../../', `/temp-uploads/${typeDocumentHelper.document}-${da.numberDocument}${ext}`);
                                     fs.writeFileSync(routePath, buff);
                                     try {
-                                        await clientFtp.access({
-                                            host: process.env.FTPHOST,
-                                            user: process.env.FTPUSER,
-                                            password: process.env.FTPPASSWORD,
-                                            secure: false
+                                        const fileLoad = fs.readFileSync(routePath);
+                                        const fileName = `${typeDocumentHelper.document}-${da.numberDocument}${ext}`;
+                                        const folderFilesKey = encodeURIComponent(nameFolder) + "/";
+                                        var fileKey = folderFilesKey + fileName;
+                                        console.log('entro con el file')
+                                        const upload = new AWS.S3.ManagedUpload({
+                                            params: {
+                                                Bucket: AWSBucket,
+                                                Key: fileKey,
+                                                Body: fileLoad
+                                            }
                                         });
-                                        await clientFtp.uploadFrom(routePath, `/${nameFolder}/${typeDocumentHelper.document}-${da.numberDocument}${ext}`);
-                                        fs.unlinkSync(routePath);
+
+                                        const promise = upload.promise();
+
+                                        promise.then(
+                                            function(data) {
+                                                //      fs.unlinkSync(routePath);
+                                                console.log(data)
+                                                console.log("Successfully uploaded photo.");
+                                                //  viewAlbum(albumName);
+                                            },
+                                            function(err) {
+                                                return alert("There was an error uploading your photo: ", err.message);
+                                            }
+                                        );
+
                                     } catch (error) {
                                         console.log(error);
-                                        throw new Error('Error FTP');
+                                        throw new Error('Error AWS');
                                     }
                                 }
                             }
@@ -80,9 +97,6 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                 }
             }
         }
-        clientFtp.close();
-
-
     } catch (error) {
         /*      logger.log({
                  level: "error",

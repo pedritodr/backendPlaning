@@ -37,7 +37,7 @@ class Server {
               createToFileFtp();
 
           }); */
-        //createToFileFtp();
+        createToFileFtp();
     }
 
     routers() {

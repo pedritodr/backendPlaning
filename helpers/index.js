@@ -3,11 +3,13 @@ const generateJwt = require('./generate-jwt');
 const loadFile = require('./load-file');
 const logger = require('./winston');
 const typeDocumentHelper = require('./type-documet');
+const validatePage = require('./page-validate');
 
 module.exports = {
     ...dbValidate,
     ...generateJwt,
     ...loadFile,
     ...logger,
-    ...typeDocumentHelper
+    ...typeDocumentHelper,
+    ...validatePage
 }

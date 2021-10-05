@@ -18,6 +18,30 @@ const getPlanings = async(req, res) => {
 
 }
 
+const getPlaningsPage = async(req, res) => {
+
+    const limit = 10;
+    const { page } = req.params;
+    const offset = limit * (Number(page) - 1);
+    const [planings, total] = await Promise.all([
+        Planing.find({ status: { $ne: -1 } })
+        .skip(Number(offset))
+        .limit(Number(limit))
+        .populate('user', 'name'),
+        Planing.countDocuments({ status: { $ne: -1 } })
+    ])
+
+    const totalPage = Math.ceil(total / limit);
+    res.json({
+        total,
+        per_page: limit,
+        page: Number(page),
+        total_pages: totalPage,
+        planings
+    })
+
+}
+
 const getPlaningById = async(req, res) => {
 
     const { id } = req.params;
@@ -51,7 +75,7 @@ const updatePlaning = async(req, res) => {
 const deletePlaning = async(req, res) => {
     const { id } = req.params;
 
-    const planing = await Planing.findByIdAndUpdate(id, { status: false }, { new: true });
+    const planing = await Planing.findByIdAndUpdate(id, { status: -1 }, { new: true });
 
     return res.json(planing);
 
@@ -62,5 +86,6 @@ module.exports = {
     updatePlaning,
     deletePlaning,
     getPlaningById,
-    getPlanings
+    getPlanings,
+    getPlaningsPage
 }
