@@ -63,7 +63,6 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                                         const fileName = `${typeDocumentHelper.document}-${da.numberDocument}${ext}`;
                                         const folderFilesKey = encodeURIComponent(nameFolder) + "/";
                                         var fileKey = folderFilesKey + fileName;
-                                        console.log('entro con el file')
                                         const upload = new AWS.S3.ManagedUpload({
                                             params: {
                                                 Bucket: AWSBucket,
