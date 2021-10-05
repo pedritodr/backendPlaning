@@ -43,7 +43,8 @@ const createToFileFtp = async() => {
             const planing = await Planing.findOne({ status: 0 }).sort({ time: 1 }).limit(1);
             if (planing) {
                 processToFtp.setActive('process');
-                // await Planing.findByIdAndUpdate(planing._id, { status: 1 }, { new: true });
+                const dateProcess = new Date();
+                await Planing.findByIdAndUpdate(planing._id, { status: 1, date_process: dateProcess }, { new: true });
                 const uploadPath = path.join(__dirname, '../uploads/', 'cvss', planing.secuential);
                 const dateBegin = new Date(planing.date_begin);
                 const dateEnd = new Date(planing.date_end);
@@ -76,7 +77,8 @@ const createToFileFtp = async() => {
                 const setIntervalFinish = setInterval(async() => {
                     if (parseInt(pool.stats().pendingTasks) == 0) {
                         clearInterval(setIntervalFinish);
-                        // await Planing.findByIdAndUpdate(planing._id, { status: 2 }, { new: true });
+                        const dateFinish = new Date();
+                        await Planing.findByIdAndUpdate(planing._id, { status: 2, date_culminated: dateFinish }, { new: true });
                         processToFtp.setActive('complete');
                         pool.terminate();
                     }
