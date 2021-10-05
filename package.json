@@ -25,6 +25,7 @@
         "express-validator": "^6.11.1",
         "google-auth-library": "^7.1.0",
         "jsonwebtoken": "^8.5.1",
+        "log4js": "^6.3.0",
         "moment": "^2.29.1",
         "mongoose": "^5.12.11",
         "node-cron": "^3.0.0",

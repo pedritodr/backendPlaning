@@ -7,37 +7,22 @@ const AWS = require('aws-sdk');
 //HTTP CLIENT
 const axios = require("axios");
 const searchTypeDocument = require('../../helpers/type-documet');
-let winston = require('winston');
-const { options, levels } = require("../../helpers/logger");
+const logger = require('../../helpers/log4');
 const used = process.memoryUsage();
 
 const pushDocumentToFtp = async(data, planing, nameFolder) => {
 
     try {
-
         const AWSBucket = "ec-stupendo-ia";
         AWS.config.loadFromPath('./s3_config.json');
         planing = JSON.parse(planing);
-        const optionsLog = options(planing._id);
-        const logger = winston.createLogger({
-            levels: levels(),
-            format: winston.format.json(),
-            defaultMeta: {
-                service: 'stupendo-worker'
-            },
-            transports: [
-                new winston.transports.File(optionsLog.fileCombined),
-                new winston.transports.File(optionsLog.fileError)
-            ],
-            exitOnError: false,
-        });
+        const log = logger(planing._id)
         const dateBegin = new Date(planing.date_begin);
         const dateEnd = new Date(planing.date_end);
         const year = dateBegin.getFullYear();
         const typeDocumentHelper = searchTypeDocument(planing.document_type);
         for (const da of data) {
             if (typeof da !== "undefined") {
-                console.log(da.numberDocument);
                 const numberInvoice = da.numberDocument;
                 const numberDocumentSplit = numberInvoice.split('-');
                 if (numberDocumentSplit.length === 3) {
@@ -50,16 +35,15 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                         NombreArchivo: `${typeDocumentHelper.document}-${da.numberDocument}`,
                         Xml: planing.output_format === 1 ? true : false,
                         Pdf: planing.output_format === 2 ? true : false,
-                        AnioDocumento: '2020' /* year.toString() */
+                        AnioDocumento: year.toString()
                     };
 
                     const resultPetition = await axios.post(
                         process.env.ENDPOINT_API_STUPENDO,
                         JSON.stringify(bodyParams)
                     );
-                    console.log(resultPetition)
                     if (resultPetition.status === 200) {
-                        if (resultPetition.data.Resultado === 'ok') {
+                        if (resultPetition.data.Resultado) {
                             let fechaAutorizacion = resultPetition.data.FechaAutorizacion;
                             let fechaSplit = fechaAutorizacion.split(' ');
                             let date = fechaSplit[0].split('/');
@@ -97,65 +81,79 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                                             console.log("Successfully uploaded");
                                         },
                                         function(err) {
-                                            /*    looger.log({
-                                                   level: "error",
-                                                   status: `Error AWS`,
-                                                   message: `ID DOCUMENTO ${da.numberDocument}`,
-                                                   error_message: "There was an error uploading your photo: " + err.message,
-                                                   date: new Date().toString(),
-                                                   env: process.env.NODE_ENV,
-                                               }); */
+                                            const errorData = {
+                                                level: "error",
+                                                status: `Error en AWS`,
+                                                message: `ID DOCUMENTO ${da.numberDocument}`,
+                                                error_message: err.message,
+                                                date: new Date().toString(),
+                                                env: process.env.NODE_ENV,
+                                            };
+                                            log.error(JSON.stringify(errorData));
                                             return alert("There was an error uploading your file: ", err.message);
 
                                         }
                                     );
 
                                 } catch (error) {
-                                    console.log(error);
-                                    /*             looger.log({
-                                                    level: "error",
-                                                    status: `Error AWS`,
-                                                    message: `ID DOCUMENTO ${da.numberDocument}`,
-                                                    error_message: error,
-                                                    date: new Date().toString(),
-                                                    env: process.env.NODE_ENV,
-                                                }); */
+                                    const errorData = {
+                                        level: "error",
+                                        status: `Error en AWS`,
+                                        message: `ID DOCUMENTO ${da.numberDocument}`,
+                                        error_message: JSON.stringify(error),
+                                        date: new Date().toString(),
+                                        env: process.env.NODE_ENV,
+                                    };
+                                    log.error(JSON.stringify(errorData));
                                     throw new Error('Error AWS');
                                 }
                             } else {
-                                console.log('fecha mala')
+                                const errorData = {
+                                    level: "error",
+                                    status: `Error en el documento`,
+                                    message: `ID DOCUMENTO ${da.numberDocument}`,
+                                    error_message: `La factura no esta en el rango seleccionado ${dateBegin.toISOString().slice(0, 10)}-${dateEnd.toISOString().slice(0, 10)}`,
+                                    date: new Date().toString(),
+                                    env: process.env.NODE_ENV,
+                                };
+                                log.error(JSON.stringify(errorData));
                             }
                         } else {
-                            console.log('false')
-                            logger.log({
+                            const errorData = {
                                 level: "error",
                                 status: `Error en el documento`,
                                 message: `ID DOCUMENTO ${da.numberDocument}`,
                                 error_message: JSON.stringify(resultPetition.data),
                                 date: new Date().toString(),
                                 env: process.env.NODE_ENV,
-                            });
+                            };
+                            log.error(JSON.stringify(errorData));
                         }
                     }
                 } else {
-                    console.log('formato incorrecto')
+                    const errorData = {
+                        level: "error",
+                        status: `Error en el documento`,
+                        message: `ID DOCUMENTO ${da.numberDocument} formato incorrecto`,
+                        error_message: 'No cumple con un formato de documento valido',
+                        date: new Date().toString(),
+                        env: process.env.NODE_ENV,
+                    };
+                    log.error(JSON.stringify(errorData));
                 }
-                //  let numberDocumentSplit = da.numberDocument.split('-');
-
-
             }
         }
     } catch (error) {
         console.log(error)
-
-        /*     logger(planing._id).log({
-                level: "error",
-                status: `no procesado error: ${error}`,
-                message: `ID DOCUMENTO ${da.idDocumento}`,
-                error_message: resultPetition.data.message,
-                date: new Date().toString(),
-                env: process.env.NODE_ENV,
-            }); */
+        const errorData = {
+            level: "error",
+            status: `Error en el documento`,
+            message: `Ocurrio algunos problemas`,
+            error_message: JSON.stringify(error),
+            date: new Date().toString(),
+            env: process.env.NODE_ENV,
+        };
+        log.error(JSON.stringify(errorData));
     }
 };
 
