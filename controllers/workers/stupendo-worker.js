@@ -75,7 +75,7 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
 
                                         promise.then(
                                             function(data) {
-                                                //      fs.unlinkSync(routePath);
+                                                fs.unlinkSync(routePath);
                                                 console.log(data)
                                                 console.log("Successfully uploaded photo.");
                                                 //  viewAlbum(albumName);

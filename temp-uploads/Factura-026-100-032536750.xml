@@ -1,0 +1,190 @@
+<autorizacion><estado>AUTORIZADO</estado><numeroAutorizacion>3008202101099215356300110261000325367503253675016</numeroAutorizacion><fechaAutorizacion>2021-08-30T23:50:05-05:00</fechaAutorizacion><ambiente>PRUEBAS</ambiente><comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?><factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>1</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>INTERNATIONAL WATER SERVICES (GUAYAQUIL) INTERAGUA C LTDA</razonSocial>
+    <nombreComercial>INTERAGUA</nombreComercial>
+    <ruc>0992153563001</ruc>
+    <claveAcceso>3008202101099215356300110261000325367503253675016</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>026</estab>
+    <ptoEmi>100</ptoEmi>
+    <secuencial>032536750</secuencial>
+    <dirMatriz>Urbanización San Eduardo Av. José Rodriguez Bonín 20-6 y Av. Marginal del Salado.</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>30/08/2021</fechaEmision>
+    <dirEstablecimiento>Parque Emp. Colón Urdesa Norte Av. Rodrigo Chávez G.frente a Bosques del Salado Corporativo 4 Piso 1</dirEstablecimiento>
+    <contribuyenteEspecial>345</contribuyenteEspecial>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>07</tipoIdentificacionComprador>
+    <razonSocialComprador>CONSUMIDOR FINAL</razonSocialComprador>
+    <identificacionComprador>9999999999999</identificacionComprador>
+    <direccionComprador>AV. 8 SE MZ. 0050(1) - 4 DP 202</direccionComprador>
+    <totalSinImpuestos>0.10</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <baseImponible>0.10</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0</propina>
+    <importeTotal>0.10</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>.1</total>
+        <plazo>31</plazo>
+        <unidadTiempo>dias</unidadTiempo>
+      </pago>
+    </pagos>
+    <valorRetIva>0</valorRetIva>
+    <valorRetRenta>0</valorRetRenta>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>200</codigoPrincipal>
+      <codigoAuxiliar>0</codigoAuxiliar>
+      <descripcion>CARGO FIJO PROPORCIONAL</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>0.10</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>0.10</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="CONSUMO" valor="0.00"/>
+        <detAdicional nombre="UNIDAD" valor="0"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>0.10</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="CONTRATO">753989</campoAdicional>
+    <campoAdicional nombre="emailCliente">TORRE_MEDICA_ALCIVAR3@HOTMAIL.COM</campoAdicional>
+    <campoAdicional nombre="DIRECCION DEL ADQUIRENTE">AV. 8 SE MZ. 0050(1) - 4 DP 202</campoAdicional>
+    <campoAdicional nombre="CODIGO INTERNO">53861416</campoAdicional>
+    <campoAdicional nombre="CUPON">145784587</campoAdicional>
+    <campoAdicional nombre="Total Recaudación de Terceros">0.00</campoAdicional>
+    <campoAdicional nombre="TOTAL DEL MES MAS COBROS DE TERCEROS">0.10</campoAdicional>
+    <campoAdicional nombre="DATOS1">30-08-2021|22241390|AV. 8 SE MZ. 0050(1) - 4 DP 202 Dir: MZ. 0050 SL. 04 CHIMBORAZO # 3310 Y AZUAY ESQ. EDIF. TORRE MEDICA ALCIVAR PISO 2 REF SERVICIOS GENE|MZ. 0050 SL. 04 CHIMBORAZO # 3310 Y AZUAY ESQ. EDIF. TORRE MEDICA ALCIVAR PISO 2 REF SERVICIOS GENE</campoAdicional>
+    <campoAdicional nombre="DATOS2">AREA COMUNAL|1/2''|B08BAV050214|Y|070050004000000000000011|22241390</campoAdicional>
+    <campoAdicional nombre="DATOS3">884|891|7|30|0|22-07-2020 a 21-08-2020|3 m3|INTERNATIONAL WATER SERVICES (GUAYAQUIL)|INTERAGUA C. Ltda. R.U.C 0992153563001|Matriz: Parque Empresarial Colón‚ Urdesa  Norte Av. Rodrigo Chávez González‚ frente  Bosques del Salado‚ ColonCorp - Mezanine|Punto Emisión:  Parque Empresarial Colón</campoAdicional>
+    <campoAdicional nombre="DATOS4">.22|.00|-.00|.32|30-08-2021|INMEDIATO|4|.10|0|0|0|0.10|.00|-.00|-.00|.00</campoAdicional>
+    <campoAdicional nombre="DATOS5">3/20-3|4/20-4|5/20-3|6/20-3|7/20-2|8/20-0|9/20-7</campoAdicional>
+    <campoAdicional nombre="DATOS6">FACTURA ELECTRONICA  Obtenga su factura  electrónica ingresando a:  https://app.stupendo.ec</campoAdicional>
+  </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature217977">
+<ds:SignedInfo Id="Signature-SignedInfo152760">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID142175" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature217977-SignedProperties902623">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>kym7Wesd+zxnWD5XJqbUCtdnHsU=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1580702">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>ruEv4h+3ia5GuAVLb8CFuNKIyK4=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-415996" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>t1VJ2QvPviQBqqGJEUrWxn3JnZo=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue1042736">
+VX4p6iWqlV0uv1ZKv//whMIwNyIw6Abfw+s0j98tn5eTgIIC4d2c54OD1om29I8WQMNtHngQW0eV
+qwqbHA30/ryHmM8oDs1LYYIlMVRslzhf5/HszqGgR0YpfIT8jD5rocuyJDUK9UCNsOL+/1Z0r6xN
+dhr40XGUZj1k2KMmhoMQKj8OPamn3hYuIch8ecq8lRrM1PKt77v1g1YMXE9ZHa3wQG+7ifYmRXu0
+/qfetunoSR4Hu90oHBL0E91VZiWCVt9AX9VvTLvuNIue81gis9JiYy90nlhcZtrawwXkXDmERYK4
+ePGFTeA5NjfipHZR4Gk+D5HKXR+0RRB4KdFnkQ==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1580702">
+<ds:X509Data>
+<ds:X509Certificate>
+MIILeTCCCWGgAwIBAgIEdg0fsDANBgkqhkiG9w0BAQsFADCBmTELMAkGA1UEBhMCRUMxHTAbBgNV
+BAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAxMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJ
+T04gREUgSU5GT1JNQUNJT04xOTA3BgNVBAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNV
+QkNBLTEgU0VDVVJJVFkgREFUQTAeFw0yMDEwMjcyMjM4MzBaFw0yMjEwMjcyMjM4MzBaMIGXMQsw
+CQYDVQQGEwJFQzEdMBsGA1UECgwUU0VDVVJJVFkgREFUQSBTLkEuIDExMDAuBgNVBAsMJ0VOVElE
+QUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTjEVMBMGA1UEBRMMMjcxMDIwMTc0ODMw
+MSAwHgYDVQQDDBdFUklDIEpFQU4gTUFSSU8gUElBWlpPTjCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBALQMsBvHPH2l9k2+8huJ1+l1VZ5UapgVhsEuEI6f6kAs7D9W2eQ3Wja8FFAkKRaa
+Tzy0CNj9frNmS0+9SSgWS22ujXDa/TqGHB937r5avNoxHpEvgusGNS1ph/dF8Zukjzg9B7+REY4q
+X5d12QkdgxLUfYiySFP4HcYLVM24Oy+OG3eKZEuyXEPCy4Ba9C5p6XGOlozZDftaDPT7AvjDIjPW
+fimO1qV7TikGOn1bVgOSjukTMsZoSMSdZjhOzgWH1YsAgml6LInoLWnvXqsbNtKQxVpX+yItteGM
+V/RbPbnZSh2CC5zwnRzAmjh3q3hyw3ENziixpoR1AbpsC4XiofcCAwEAAaOCBscwggbDMFkGCCsG
+AQUFBwEBBE0wSzBJBggrBgEFBQcwAYY9aHR0cDovL29jc3Bndy5zZWN1cml0eWRhdGEubmV0LmVj
+L2VqYmNhL3B1YmxpY3dlYi9zdGF0dXMvb2NzcDAdBgNVHQ4EFgQUjsvRstsbm3FNDFPtY5YinlD4
+KYUwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBRcD4WkdBD8rQEsGgA9kxcJ+jkB1jArBgNVHRAE
+JDAigA8yMDIwMTAyNzIyMzgzMFqBDzIwMjIxMDI3MjIzODMwWjCBzAYDVR0uBIHEMIHBMIG+oIG7
+oIG4hoG1bGRhcDovL2xkYXBzZC5zZWN1cml0eWRhdGEubmV0LmVjL0NOPUFVVE9SSURBRCBERSBD
+RVJUSUZJQ0FDSU9OIFNVQkNBLTEgU0VDVVJJVFkgREFUQSxPVT1FTlRJREFEIERFIENFUlRJRklD
+QUNJT04gREUgSU5GT1JNQUNJT04sTz1TRUNVUklUWSBEQVRBIFMuQS4gMSxDPUVDP2RlbHRhUmV2
+b2NhdGlvbkxpc3Q/YmFzZTBrBgNVHSAEZDBiMGAGCisGAQQBgqZyAgowUjBQBggrBgEFBQcCAjBE
+HkIAQwBlAHIAdABpAGYAaQBjAGEAZABvACAAZABlACAATQBpAGUAbQBiAHIAbwAgAGQAZQAgAEUA
+bQBwAHIAZQBzAGEwggKeBgNVHR8EggKVMIICkTCB5aBBoD+GPWh0dHA6Ly9vY3NwZ3cuc2VjdXJp
+dHlkYXRhLm5ldC5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVzL29jc3CigZ+kgZwwgZkxOTA3BgNV
+BAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNVQkNBLTEgU0VDVVJJVFkgREFUQTEwMC4G
+A1UECwwnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OMR0wGwYDVQQKDBRT
+RUNVUklUWSBEQVRBIFMuQS4gMTELMAkGA1UEBhMCRUMwgcSggcGggb6GgbtsZGFwOi8vbGRhcHNk
+LnNlY3VyaXR5ZGF0YS5uZXQuZWMvQ049QVVUT1JJREFEIERFIENFUlRJRklDQUNJT04gU1VCQ0Et
+MSBTRUNVUklUWSBEQVRBLE9VPUVOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lP
+TixPPVNFQ1VSSVRZIERBVEEgUy5BLiAxLEM9RUM/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9i
+YXNlMIHfoIHcoIHZhoHWaHR0cHM6Ly9wb3J0YWwtb3BlcmFkb3Iuc2VjdXJpdHlkYXRhLm5ldC5l
+Yy9lamJjYS9wdWJsaWN3ZWIvd2ViZGlzdC9jZXJ0ZGlzdD9jbWQ9Y3JsJmlzc3Vlcj1DTj1BVVRP
+UklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUJDQS0xIFNFQ1VSSVRZIERBVEEsT1U9RU5USURBRCBE
+RSBDRVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OLE89U0VDVVJJVFkgREFUQSBTLkEuIDEsQz1F
+QzALBgNVHQ8EBAMCBeAwIgYDVR0RBBswGYEXZXJpYy5waWF6em9uQHZlb2xpYS5jb20wGgYKKwYB
+BAGCpnIDAQQMDAowOTYzMTk3MjE1MB8GCisGAQQBgqZyAwIEEQwPRVJJQyBKRUFOIE1BUklPMBcG
+CisGAQQBgqZyAwMECQwHUElBWlpPTjARBgorBgEEAYKmcgMEBAMMAS4wIwYKKwYBBAGCpnIDBQQV
+DBNESVJFQ1RPUiBGSU5BTkNJRVJPMDQGCisGAQQBgqZyAwcEJgwkIEFWLiBST0RSSUdPIENIQVZF
+WiBHT05aQUxFWiBTT0xBUiA2MBwGCisGAQQBgqZyAwgEDgwMNTkzOTg3MTEwMDcxMBkGCisGAQQB
+gqZyAwkECwwJR1VBWUFRVUlMMEoGCisGAQQBgqZyAwoEPAw6SU5URVJOQVRJT05BTCBXQVRFUiBT
+RVJWSUNFUyAoR1VBWUFRVUlMKSBJTlRFUkFHVUEgQy4gTFREQTAdBgorBgEEAYKmcgMLBA8MDTA5
+OTIxNTM1NjMwMDEwFwYKKwYBBAGCpnIDDAQJDAdFQ1VBRE9SMBIGCisGAQQBgqZyAx0EBAwCTm8w
+HwYKKwYBBAGCpnIDIAQRDA8wMDEwMDIwMDAwNjQ2OTQwEwYKKwYBBAGCpnIDIQQFDANQRlgwEQYK
+KwYBBAGCpnIDIgQDDAEuMA0GCSqGSIb3DQEBCwUAA4ICAQBOtuVyCAEFY7YQrB+/kl6DSxZ6Gju3
+yiwPe6Pzp9W1VCK/L4NbKqdcJEYcDs/u4BQ2F75COkJypHqYgL4RnwMiS9XDMbTK8CeLJ0RiKGuc
+bKrAml+ozKb7CZ4zgLXa1SDijdF4eBYyuaElVFeGrc2VDoajN9ui/JhNyiJJyl6t/Hyglfpbc0pv
+BTxu0dtNnSfMt2kCFeLzFsaeBJzLYOwavmH4bZgygmVkFvEkzUzCcWXZNvfetTMsi0oOtnnkvOpS
+Suwhr5ytUzOgtF7CuBYMqSnbGVh6lN5vKo6YTGwbyya9/GW3zXseMuKlpcBspnjgEboyGSbL/O0n
+H7kubvmvC2y40q/wF6jMIaE36PiTs24haPlf/jlNoZ/Lr7wEcjKzmyvlnqNvqKH+3ErccPR0xKtG
+xJtCI1+65pSlGH8zi4fXvEehFY5t1q6Qq9kenh0cmBCdwWL1oSzQHg+8/ssAqkxKkCZFWNHtRQXl
+po1Lkh7gCg18aj0JLVIVSHllMPuo2F9JB9vAFKrUYjeSj6o99pZKha7+gfiavUdFqV3+ltHH6Mbd
+2BS5ouaTlFIsLnNBQr8JKyHZShIJ+udb9K3KJgzEOs5iC0pj7MCjtDvvkATgm3bkBZDXNPE+sN6f
+HJya3ZtYwJ6LnmvUDsR53Qpcxp6kqIlV2eKnBAm0rB8SbA==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+tAywG8c8faX2Tb7yG4nX6XVVnlRqmBWGwS4Qjp/qQCzsP1bZ5DdaNrwUUCQpFppPPLQI2P1+s2ZL
+T71JKBZLba6NcNr9OoYcH3fuvlq82jEekS+C6wY1LWmH90Xxm6SPOD0Hv5ERjipfl3XZCR2DEtR9
+iLJIU/gdxgtUzbg7L44bd4pkS7JcQ8LLgFr0LmnpcY6WjNkN+1oM9PsC+MMiM9Z+KY7WpXtOKQY6
+fVtWA5KO6RMyxmhIxJ1mOE7OBYfViwCCaXosiegtae9eqxs20pDFWlf7Ii214YxX9Fs9udlKHYIL
+nPCdHMCaOHereHLDcQ3OKLGmhHUBumwLheKh9w==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature217977-Object830262"><etsi:QualifyingProperties Target="#Signature217977"><etsi:SignedProperties Id="Signature217977-SignedProperties902623"><etsi:SignedSignatureProperties><etsi:SigningTime>2021-08-30T23:49:31-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>4D1OdzVoEljTEAjg5vzYzy38I88=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUBCA-1 SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A. 1,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1980571568</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-415996"><etsi:Description>comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante></autorizacion>

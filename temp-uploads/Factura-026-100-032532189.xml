@@ -1,0 +1,257 @@
+<autorizacion><estado>AUTORIZADO</estado><numeroAutorizacion>3008202101099215356300110261000325321893253218918</numeroAutorizacion><fechaAutorizacion>2021-08-30T23:44:44-05:00</fechaAutorizacion><ambiente>PRUEBAS</ambiente><comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?><factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>1</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>INTERNATIONAL WATER SERVICES (GUAYAQUIL) INTERAGUA C LTDA</razonSocial>
+    <nombreComercial>INTERAGUA</nombreComercial>
+    <ruc>0992153563001</ruc>
+    <claveAcceso>3008202101099215356300110261000325321893253218918</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>026</estab>
+    <ptoEmi>100</ptoEmi>
+    <secuencial>032532189</secuencial>
+    <dirMatriz>Urbanización San Eduardo Av. José Rodriguez Bonín 20-6 y Av. Marginal del Salado.</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>30/08/2021</fechaEmision>
+    <dirEstablecimiento>Parque Emp. Colón Urdesa Norte Av. Rodrigo Chávez G.frente a Bosques del Salado Corporativo 4 Piso 1</dirEstablecimiento>
+    <contribuyenteEspecial>345</contribuyenteEspecial>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>MUSEO ANTROPOLÓGICO Y DE ARTE CONTEMPORANEO MAAC </razonSocialComprador>
+    <identificacionComprador>0968607730001</identificacionComprador>
+    <direccionComprador>GUAYAS / GUAYAQUIL / XIMENA / MALECON SIMON BOLIVAR S/N Y LOJA</direccionComprador>
+    <totalSinImpuestos>1450.08</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <baseImponible>1450.08</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0</propina>
+    <importeTotal>1450.08</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>1450.08</total>
+        <plazo>31</plazo>
+        <unidadTiempo>dias</unidadTiempo>
+      </pago>
+    </pagos>
+    <valorRetIva>0</valorRetIva>
+    <valorRetRenta>0</valorRetRenta>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>10</codigoPrincipal>
+      <codigoAuxiliar>0</codigoAuxiliar>
+      <descripcion>AGUA POTABLE</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>560.44</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>560.44</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="CONSUMO" valor="845.00"/>
+        <detAdicional nombre="UNIDAD" valor="0"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>560.44</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>20</codigoPrincipal>
+      <codigoAuxiliar>0</codigoAuxiliar>
+      <descripcion>ALCANTARILLADO</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>448.35</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>448.35</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="CONSUMO" valor="0.00"/>
+        <detAdicional nombre="UNIDAD" valor="0"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>448.35</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>30</codigoPrincipal>
+      <codigoAuxiliar>0</codigoAuxiliar>
+      <descripcion>CARGO FIJO</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>37.71</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>37.71</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="CONSUMO" valor="0.00"/>
+        <detAdicional nombre="UNIDAD" valor="0"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>37.71</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>50</codigoPrincipal>
+      <codigoAuxiliar>0</codigoAuxiliar>
+      <descripcion>INTERESES</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>403.58</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>403.58</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="CONSUMO" valor="0.00"/>
+        <detAdicional nombre="UNIDAD" valor="0"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>403.58</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="CONTRATO">478417</campoAdicional>
+    <campoAdicional nombre="emailCliente">resanchez@culturaypatrimonio.gob.ec</campoAdicional>
+    <campoAdicional nombre="DIRECCION DEL ADQUIRENTE">MALECON SIM N BOLIVAR REF  FRENTE A LA ESPOL</campoAdicional>
+    <campoAdicional nombre="CODIGO INTERNO">53858268</campoAdicional>
+    <campoAdicional nombre="CUPON">145781493</campoAdicional>
+    <campoAdicional nombre="CEM">16.47</campoAdicional>
+    <campoAdicional nombre="Total Recaudación de Terceros">16.47</campoAdicional>
+    <campoAdicional nombre="TOTAL DEL MES MAS COBROS DE TERCEROS">1466.55</campoAdicional>
+    <campoAdicional nombre="DATOS1">30-08-2021||MALECON SIM N BOLIVAR REF  FRENTE A LA ESPOL Dir: MALECON SIM N BOLIVAR Y LOJA REF  FRENTE A LA ESPOL|MALECON SIM N BOLIVAR Y LOJA REF  FRENTE A LA ESPOL</campoAdicional>
+    <campoAdicional nombre="DATOS2">DIRECCION CULTURAL DE GUAYAQUIL|1 1/2''|B16DE0000083|Y|010000000000000000000005|</campoAdicional>
+    <campoAdicional nombre="DATOS3">38484|0|845|399|0|23-07-2020 a 26-08-2021|845 m3|INTERNATIONAL WATER SERVICES (GUAYAQUIL)|INTERAGUA C. Ltda. R.U.C 0992153563001|Matriz: Parque Empresarial Colón‚ Urdesa  Norte Av. Rodrigo Chávez González‚ frente  Bosques del Salado‚ ColonCorp - Mezanine|Punto Emisión:  Parque Empresarial Colón</campoAdicional>
+    <campoAdicional nombre="DATOS4">4‚557.62|21.62|-.00|6‚045.79|30-08-2021|INMEDIATO|7|1‚046.50|0|0|0|1‚450.08|.00|-.00|-.00|.00</campoAdicional>
+    <campoAdicional nombre="DATOS5">3/20-1076|4/20-1016|5/20-498|6/20-565|7/20-1096|8/20-991|9/20-845</campoAdicional>
+    <campoAdicional nombre="DATOS6">Actualmente mantiene un saldo pendiente con la empresa; por lo que procederemos con la suspensión del servicio conforme  a  lo establecido en el reglamento de prestación de servicio de Agua Potable en dicho caso se facturará el valor de $ 5‚56 por corte + IVA y $3‚49 por reconexión + IVA. </campoAdicional>
+  </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature1012133">
+<ds:SignedInfo Id="Signature-SignedInfo818389">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID428941" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature1012133-SignedProperties583617">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>23VVeeFc8PoOCZ3+WIKRzTRQ+Tw=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1555406">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>fxluz9heY/A5epMg/Lzw1TeY7zs=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-952322" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>ab4hEtZmmm4jO1mKCatDIUtoDEE=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue881914">
+m9LfD0mS3ZNHWFzVt0nojMUbJKuJlb9uVrDdekV0TS3FNzjAz08vPXBiplQKz5y/ORR28q0GskgW
+UNuTzgtt920yPtZV4iTKlAl6BotkqFBAUJUhUOfVnQkykA7JGs732rfIwN/v4JsGOn+oQh0w3Jx7
+x5ylgEgL23G/5MMhduV5fiVrwVq1d/C/VsMvj57C3rTE+RgSAu/ruxSrRzz3FV85HE5MBSEeVOB7
+8Cqrl56/4+ywinhc4L/OHhtkAVZxPlzRkEbGG8uydk6XNDrY8ses4Kniy7nVJs2l//YHXzcyAaSF
+icBd0s8Lv/VySOf1yPl16TaarQOQ6ORAgdwqfA==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1555406">
+<ds:X509Data>
+<ds:X509Certificate>
+MIILeTCCCWGgAwIBAgIEdg0fsDANBgkqhkiG9w0BAQsFADCBmTELMAkGA1UEBhMCRUMxHTAbBgNV
+BAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAxMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJ
+T04gREUgSU5GT1JNQUNJT04xOTA3BgNVBAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNV
+QkNBLTEgU0VDVVJJVFkgREFUQTAeFw0yMDEwMjcyMjM4MzBaFw0yMjEwMjcyMjM4MzBaMIGXMQsw
+CQYDVQQGEwJFQzEdMBsGA1UECgwUU0VDVVJJVFkgREFUQSBTLkEuIDExMDAuBgNVBAsMJ0VOVElE
+QUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTjEVMBMGA1UEBRMMMjcxMDIwMTc0ODMw
+MSAwHgYDVQQDDBdFUklDIEpFQU4gTUFSSU8gUElBWlpPTjCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBALQMsBvHPH2l9k2+8huJ1+l1VZ5UapgVhsEuEI6f6kAs7D9W2eQ3Wja8FFAkKRaa
+Tzy0CNj9frNmS0+9SSgWS22ujXDa/TqGHB937r5avNoxHpEvgusGNS1ph/dF8Zukjzg9B7+REY4q
+X5d12QkdgxLUfYiySFP4HcYLVM24Oy+OG3eKZEuyXEPCy4Ba9C5p6XGOlozZDftaDPT7AvjDIjPW
+fimO1qV7TikGOn1bVgOSjukTMsZoSMSdZjhOzgWH1YsAgml6LInoLWnvXqsbNtKQxVpX+yItteGM
+V/RbPbnZSh2CC5zwnRzAmjh3q3hyw3ENziixpoR1AbpsC4XiofcCAwEAAaOCBscwggbDMFkGCCsG
+AQUFBwEBBE0wSzBJBggrBgEFBQcwAYY9aHR0cDovL29jc3Bndy5zZWN1cml0eWRhdGEubmV0LmVj
+L2VqYmNhL3B1YmxpY3dlYi9zdGF0dXMvb2NzcDAdBgNVHQ4EFgQUjsvRstsbm3FNDFPtY5YinlD4
+KYUwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBRcD4WkdBD8rQEsGgA9kxcJ+jkB1jArBgNVHRAE
+JDAigA8yMDIwMTAyNzIyMzgzMFqBDzIwMjIxMDI3MjIzODMwWjCBzAYDVR0uBIHEMIHBMIG+oIG7
+oIG4hoG1bGRhcDovL2xkYXBzZC5zZWN1cml0eWRhdGEubmV0LmVjL0NOPUFVVE9SSURBRCBERSBD
+RVJUSUZJQ0FDSU9OIFNVQkNBLTEgU0VDVVJJVFkgREFUQSxPVT1FTlRJREFEIERFIENFUlRJRklD
+QUNJT04gREUgSU5GT1JNQUNJT04sTz1TRUNVUklUWSBEQVRBIFMuQS4gMSxDPUVDP2RlbHRhUmV2
+b2NhdGlvbkxpc3Q/YmFzZTBrBgNVHSAEZDBiMGAGCisGAQQBgqZyAgowUjBQBggrBgEFBQcCAjBE
+HkIAQwBlAHIAdABpAGYAaQBjAGEAZABvACAAZABlACAATQBpAGUAbQBiAHIAbwAgAGQAZQAgAEUA
+bQBwAHIAZQBzAGEwggKeBgNVHR8EggKVMIICkTCB5aBBoD+GPWh0dHA6Ly9vY3NwZ3cuc2VjdXJp
+dHlkYXRhLm5ldC5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVzL29jc3CigZ+kgZwwgZkxOTA3BgNV
+BAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNVQkNBLTEgU0VDVVJJVFkgREFUQTEwMC4G
+A1UECwwnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OMR0wGwYDVQQKDBRT
+RUNVUklUWSBEQVRBIFMuQS4gMTELMAkGA1UEBhMCRUMwgcSggcGggb6GgbtsZGFwOi8vbGRhcHNk
+LnNlY3VyaXR5ZGF0YS5uZXQuZWMvQ049QVVUT1JJREFEIERFIENFUlRJRklDQUNJT04gU1VCQ0Et
+MSBTRUNVUklUWSBEQVRBLE9VPUVOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lP
+TixPPVNFQ1VSSVRZIERBVEEgUy5BLiAxLEM9RUM/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9i
+YXNlMIHfoIHcoIHZhoHWaHR0cHM6Ly9wb3J0YWwtb3BlcmFkb3Iuc2VjdXJpdHlkYXRhLm5ldC5l
+Yy9lamJjYS9wdWJsaWN3ZWIvd2ViZGlzdC9jZXJ0ZGlzdD9jbWQ9Y3JsJmlzc3Vlcj1DTj1BVVRP
+UklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUJDQS0xIFNFQ1VSSVRZIERBVEEsT1U9RU5USURBRCBE
+RSBDRVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OLE89U0VDVVJJVFkgREFUQSBTLkEuIDEsQz1F
+QzALBgNVHQ8EBAMCBeAwIgYDVR0RBBswGYEXZXJpYy5waWF6em9uQHZlb2xpYS5jb20wGgYKKwYB
+BAGCpnIDAQQMDAowOTYzMTk3MjE1MB8GCisGAQQBgqZyAwIEEQwPRVJJQyBKRUFOIE1BUklPMBcG
+CisGAQQBgqZyAwMECQwHUElBWlpPTjARBgorBgEEAYKmcgMEBAMMAS4wIwYKKwYBBAGCpnIDBQQV
+DBNESVJFQ1RPUiBGSU5BTkNJRVJPMDQGCisGAQQBgqZyAwcEJgwkIEFWLiBST0RSSUdPIENIQVZF
+WiBHT05aQUxFWiBTT0xBUiA2MBwGCisGAQQBgqZyAwgEDgwMNTkzOTg3MTEwMDcxMBkGCisGAQQB
+gqZyAwkECwwJR1VBWUFRVUlMMEoGCisGAQQBgqZyAwoEPAw6SU5URVJOQVRJT05BTCBXQVRFUiBT
+RVJWSUNFUyAoR1VBWUFRVUlMKSBJTlRFUkFHVUEgQy4gTFREQTAdBgorBgEEAYKmcgMLBA8MDTA5
+OTIxNTM1NjMwMDEwFwYKKwYBBAGCpnIDDAQJDAdFQ1VBRE9SMBIGCisGAQQBgqZyAx0EBAwCTm8w
+HwYKKwYBBAGCpnIDIAQRDA8wMDEwMDIwMDAwNjQ2OTQwEwYKKwYBBAGCpnIDIQQFDANQRlgwEQYK
+KwYBBAGCpnIDIgQDDAEuMA0GCSqGSIb3DQEBCwUAA4ICAQBOtuVyCAEFY7YQrB+/kl6DSxZ6Gju3
+yiwPe6Pzp9W1VCK/L4NbKqdcJEYcDs/u4BQ2F75COkJypHqYgL4RnwMiS9XDMbTK8CeLJ0RiKGuc
+bKrAml+ozKb7CZ4zgLXa1SDijdF4eBYyuaElVFeGrc2VDoajN9ui/JhNyiJJyl6t/Hyglfpbc0pv
+BTxu0dtNnSfMt2kCFeLzFsaeBJzLYOwavmH4bZgygmVkFvEkzUzCcWXZNvfetTMsi0oOtnnkvOpS
+Suwhr5ytUzOgtF7CuBYMqSnbGVh6lN5vKo6YTGwbyya9/GW3zXseMuKlpcBspnjgEboyGSbL/O0n
+H7kubvmvC2y40q/wF6jMIaE36PiTs24haPlf/jlNoZ/Lr7wEcjKzmyvlnqNvqKH+3ErccPR0xKtG
+xJtCI1+65pSlGH8zi4fXvEehFY5t1q6Qq9kenh0cmBCdwWL1oSzQHg+8/ssAqkxKkCZFWNHtRQXl
+po1Lkh7gCg18aj0JLVIVSHllMPuo2F9JB9vAFKrUYjeSj6o99pZKha7+gfiavUdFqV3+ltHH6Mbd
+2BS5ouaTlFIsLnNBQr8JKyHZShIJ+udb9K3KJgzEOs5iC0pj7MCjtDvvkATgm3bkBZDXNPE+sN6f
+HJya3ZtYwJ6LnmvUDsR53Qpcxp6kqIlV2eKnBAm0rB8SbA==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+tAywG8c8faX2Tb7yG4nX6XVVnlRqmBWGwS4Qjp/qQCzsP1bZ5DdaNrwUUCQpFppPPLQI2P1+s2ZL
+T71JKBZLba6NcNr9OoYcH3fuvlq82jEekS+C6wY1LWmH90Xxm6SPOD0Hv5ERjipfl3XZCR2DEtR9
+iLJIU/gdxgtUzbg7L44bd4pkS7JcQ8LLgFr0LmnpcY6WjNkN+1oM9PsC+MMiM9Z+KY7WpXtOKQY6
+fVtWA5KO6RMyxmhIxJ1mOE7OBYfViwCCaXosiegtae9eqxs20pDFWlf7Ii214YxX9Fs9udlKHYIL
+nPCdHMCaOHereHLDcQ3OKLGmhHUBumwLheKh9w==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature1012133-Object990330"><etsi:QualifyingProperties Target="#Signature1012133"><etsi:SignedProperties Id="Signature1012133-SignedProperties583617"><etsi:SignedSignatureProperties><etsi:SigningTime>2021-08-30T20:44:10-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>4D1OdzVoEljTEAjg5vzYzy38I88=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUBCA-1 SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A. 1,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1980571568</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-952322"><etsi:Description>comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante></autorizacion>

@@ -1,0 +1,301 @@
+<autorizacion><estado>AUTORIZADO</estado><numeroAutorizacion>3008202101099215356300110261000325330563253305610</numeroAutorizacion><fechaAutorizacion>2021-08-30T23:07:06-05:00</fechaAutorizacion><ambiente>PRUEBAS</ambiente><comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?><factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>1</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>INTERNATIONAL WATER SERVICES (GUAYAQUIL) INTERAGUA C LTDA</razonSocial>
+    <nombreComercial>INTERAGUA</nombreComercial>
+    <ruc>0992153563001</ruc>
+    <claveAcceso>3008202101099215356300110261000325330563253305610</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>026</estab>
+    <ptoEmi>100</ptoEmi>
+    <secuencial>032533056</secuencial>
+    <dirMatriz>Urbanización San Eduardo Av. José Rodriguez Bonín 20-6 y Av. Marginal del Salado.</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>30/08/2021</fechaEmision>
+    <dirEstablecimiento>Parque Emp. Colón Urdesa Norte Av. Rodrigo Chávez G.frente a Bosques del Salado Corporativo 4 Piso 1</dirEstablecimiento>
+    <contribuyenteEspecial>345</contribuyenteEspecial>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>DIRECCION DE VIVIENDA DE LA ARMADA </razonSocialComprador>
+    <identificacionComprador>1768012550001</identificacionComprador>
+    <direccionComprador>AV. DOMINGO COMIN Y CALLEJON K</direccionComprador>
+    <totalSinImpuestos>11.65</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <baseImponible>11.65</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0</propina>
+    <importeTotal>11.65</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>11.65</total>
+        <plazo>31</plazo>
+        <unidadTiempo>dias</unidadTiempo>
+      </pago>
+    </pagos>
+    <valorRetIva>0</valorRetIva>
+    <valorRetRenta>0</valorRetRenta>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>10</codigoPrincipal>
+      <codigoAuxiliar>0</codigoAuxiliar>
+      <descripcion>AGUA POTABLE</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>4.49</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>4.49</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="CONSUMO" valor="14.00"/>
+        <detAdicional nombre="UNIDAD" valor="0"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>4.49</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>20</codigoPrincipal>
+      <codigoAuxiliar>0</codigoAuxiliar>
+      <descripcion>ALCANTARILLADO</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>3.59</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>3.59</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="CONSUMO" valor="0.00"/>
+        <detAdicional nombre="UNIDAD" valor="0"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>3.59</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>50</codigoPrincipal>
+      <codigoAuxiliar>0</codigoAuxiliar>
+      <descripcion>INTERESES</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>1.68</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>1.68</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="CONSUMO" valor="0.00"/>
+        <detAdicional nombre="UNIDAD" valor="0"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>1.68</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>60</codigoPrincipal>
+      <codigoAuxiliar>0</codigoAuxiliar>
+      <descripcion>CONSUMO COMUNAL GENERAL</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>0.46</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>0.46</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="CONSUMO" valor="1.42"/>
+        <detAdicional nombre="UNIDAD" valor="0"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>0.46</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>130</codigoPrincipal>
+      <codigoAuxiliar>0</codigoAuxiliar>
+      <descripcion>ALCANTARILLADO COMUNAL GENERAL</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>0.37</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>0.37</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="CONSUMO" valor="0.00"/>
+        <detAdicional nombre="UNIDAD" valor="0"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>0.37</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>200</codigoPrincipal>
+      <codigoAuxiliar>0</codigoAuxiliar>
+      <descripcion>CARGO FIJO PROPORCIONAL</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>1.06</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>1.06</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="CONSUMO" valor="0.00"/>
+        <detAdicional nombre="UNIDAD" valor="0"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>0</codigoPorcentaje>
+          <tarifa>0</tarifa>
+          <baseImponible>1.06</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="CONTRATO">572888</campoAdicional>
+    <campoAdicional nombre="emailCliente">dirviv.facturas.sb@gmail.com</campoAdicional>
+    <campoAdicional nombre="DIRECCION DEL ADQUIRENTE">CALLE 43B SE MZ. 0037 - 1 BQ N3 DP 302</campoAdicional>
+    <campoAdicional nombre="CODIGO INTERNO">53856321</campoAdicional>
+    <campoAdicional nombre="CUPON">145779649</campoAdicional>
+    <campoAdicional nombre="CEM">0.27</campoAdicional>
+    <campoAdicional nombre="Total Recaudación de Terceros">0.27</campoAdicional>
+    <campoAdicional nombre="TOTAL DEL MES MAS COBROS DE TERCEROS">11.92</campoAdicional>
+    <campoAdicional nombre="DATOS1">30-08-2021|20221020|CALLE 43B SE MZ. 0037 - 1 BQ N3 DP 302 Dir: CIUDADELA LA SAIBA SL. 001 BLOQUE N3 PISO 3 DPTO. 302|CIUDADELA LA SAIBA SL. 001 BLOQUE N3 PISO 3 DPTO. 302</campoAdicional>
+    <campoAdicional nombre="DATOS2">DIRECCION DE VIVIENDA DE LA ARMADA|1/2''|H19VA218129L|Y|450037001000004000000002|20221020</campoAdicional>
+    <campoAdicional nombre="DATOS3">123|0|14|386|1.42|06-08-2020 a 27-08-2021|14 m3|INTERNATIONAL WATER SERVICES (GUAYAQUIL)|INTERAGUA C. Ltda. R.U.C 0992153563001|Matriz: Parque Empresarial Colón‚ Urdesa  Norte Av. Rodrigo Chávez González‚ frente  Bosques del Salado‚ ColonCorp - Mezanine|Punto Emisión:  Parque Empresarial Colón</campoAdicional>
+    <campoAdicional nombre="DATOS4">18.99|.05|-.00|30.96|30-08-2021|INMEDIATO|4|9.97|0|0|0|11.65|.00|-.00|-.00|.00</campoAdicional>
+    <campoAdicional nombre="DATOS5">3/20-11|4/20-12|5/20-14|6/20-22|7/20-14|8/20-11|9/20-14</campoAdicional>
+    <campoAdicional nombre="DATOS6">Actualmente mantiene un saldo pendiente con la empresa; por lo que procederemos con la suspensión del servicio conforme  a  lo establecido en el reglamento de prestación de servicio de Agua Potable en dicho caso se facturará el valor de $ 3‚34 por corte + IVA y $2‚33 por reconexión + IVA. </campoAdicional>
+  </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature661089">
+<ds:SignedInfo Id="Signature-SignedInfo545322">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID524892" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature661089-SignedProperties974491">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>IQCWYGXY+F0+qXN2L5/3EXgUCzk=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1544973">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>JZP+8vEkIo89mEdna/JSlqynjrU=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-186590" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>WKXxDaynQkitVuW+GXUCVQV8taw=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue186558">
+UG1gBXQBpIT7UFT+xF9UdwjyYVEOaeiOENv8pggQvAtmm4c2v7NE/dx1Ns97v/37o37zGnzWhGzC
+8HQY1w01/eNOLT9wTbwdlcYbMAfX6TM9Wf7dnG1v/a893Fkr7sMZDq7JdpOmFDeK3gC5+rnLp0OL
+Ag0BMCyU2fkIT6s9GSjo/9Z7EA2h+ktJV2fvquUdYph5/BZovs7FmDinanjuD/wUmG0sCQ4SF66A
+vLPlr1tCUvfC3tKz6nMr4EYub288dGEC0Qe4Bof1dcJG7qeqrKtjMl5dRfhiCDZnubpjGFcc+VaJ
+9xKxKmX3P1Qeo0onWIp+q5y3En585/5d8M05fw==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1544973">
+<ds:X509Data>
+<ds:X509Certificate>
+MIILeTCCCWGgAwIBAgIEdg0fsDANBgkqhkiG9w0BAQsFADCBmTELMAkGA1UEBhMCRUMxHTAbBgNV
+BAoMFFNFQ1VSSVRZIERBVEEgUy5BLiAxMTAwLgYDVQQLDCdFTlRJREFEIERFIENFUlRJRklDQUNJ
+T04gREUgSU5GT1JNQUNJT04xOTA3BgNVBAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNV
+QkNBLTEgU0VDVVJJVFkgREFUQTAeFw0yMDEwMjcyMjM4MzBaFw0yMjEwMjcyMjM4MzBaMIGXMQsw
+CQYDVQQGEwJFQzEdMBsGA1UECgwUU0VDVVJJVFkgREFUQSBTLkEuIDExMDAuBgNVBAsMJ0VOVElE
+QUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTjEVMBMGA1UEBRMMMjcxMDIwMTc0ODMw
+MSAwHgYDVQQDDBdFUklDIEpFQU4gTUFSSU8gUElBWlpPTjCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBALQMsBvHPH2l9k2+8huJ1+l1VZ5UapgVhsEuEI6f6kAs7D9W2eQ3Wja8FFAkKRaa
+Tzy0CNj9frNmS0+9SSgWS22ujXDa/TqGHB937r5avNoxHpEvgusGNS1ph/dF8Zukjzg9B7+REY4q
+X5d12QkdgxLUfYiySFP4HcYLVM24Oy+OG3eKZEuyXEPCy4Ba9C5p6XGOlozZDftaDPT7AvjDIjPW
+fimO1qV7TikGOn1bVgOSjukTMsZoSMSdZjhOzgWH1YsAgml6LInoLWnvXqsbNtKQxVpX+yItteGM
+V/RbPbnZSh2CC5zwnRzAmjh3q3hyw3ENziixpoR1AbpsC4XiofcCAwEAAaOCBscwggbDMFkGCCsG
+AQUFBwEBBE0wSzBJBggrBgEFBQcwAYY9aHR0cDovL29jc3Bndy5zZWN1cml0eWRhdGEubmV0LmVj
+L2VqYmNhL3B1YmxpY3dlYi9zdGF0dXMvb2NzcDAdBgNVHQ4EFgQUjsvRstsbm3FNDFPtY5YinlD4
+KYUwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBRcD4WkdBD8rQEsGgA9kxcJ+jkB1jArBgNVHRAE
+JDAigA8yMDIwMTAyNzIyMzgzMFqBDzIwMjIxMDI3MjIzODMwWjCBzAYDVR0uBIHEMIHBMIG+oIG7
+oIG4hoG1bGRhcDovL2xkYXBzZC5zZWN1cml0eWRhdGEubmV0LmVjL0NOPUFVVE9SSURBRCBERSBD
+RVJUSUZJQ0FDSU9OIFNVQkNBLTEgU0VDVVJJVFkgREFUQSxPVT1FTlRJREFEIERFIENFUlRJRklD
+QUNJT04gREUgSU5GT1JNQUNJT04sTz1TRUNVUklUWSBEQVRBIFMuQS4gMSxDPUVDP2RlbHRhUmV2
+b2NhdGlvbkxpc3Q/YmFzZTBrBgNVHSAEZDBiMGAGCisGAQQBgqZyAgowUjBQBggrBgEFBQcCAjBE
+HkIAQwBlAHIAdABpAGYAaQBjAGEAZABvACAAZABlACAATQBpAGUAbQBiAHIAbwAgAGQAZQAgAEUA
+bQBwAHIAZQBzAGEwggKeBgNVHR8EggKVMIICkTCB5aBBoD+GPWh0dHA6Ly9vY3NwZ3cuc2VjdXJp
+dHlkYXRhLm5ldC5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVzL29jc3CigZ+kgZwwgZkxOTA3BgNV
+BAMMMEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNVQkNBLTEgU0VDVVJJVFkgREFUQTEwMC4G
+A1UECwwnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OMR0wGwYDVQQKDBRT
+RUNVUklUWSBEQVRBIFMuQS4gMTELMAkGA1UEBhMCRUMwgcSggcGggb6GgbtsZGFwOi8vbGRhcHNk
+LnNlY3VyaXR5ZGF0YS5uZXQuZWMvQ049QVVUT1JJREFEIERFIENFUlRJRklDQUNJT04gU1VCQ0Et
+MSBTRUNVUklUWSBEQVRBLE9VPUVOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lP
+TixPPVNFQ1VSSVRZIERBVEEgUy5BLiAxLEM9RUM/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9i
+YXNlMIHfoIHcoIHZhoHWaHR0cHM6Ly9wb3J0YWwtb3BlcmFkb3Iuc2VjdXJpdHlkYXRhLm5ldC5l
+Yy9lamJjYS9wdWJsaWN3ZWIvd2ViZGlzdC9jZXJ0ZGlzdD9jbWQ9Y3JsJmlzc3Vlcj1DTj1BVVRP
+UklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUJDQS0xIFNFQ1VSSVRZIERBVEEsT1U9RU5USURBRCBE
+RSBDRVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OLE89U0VDVVJJVFkgREFUQSBTLkEuIDEsQz1F
+QzALBgNVHQ8EBAMCBeAwIgYDVR0RBBswGYEXZXJpYy5waWF6em9uQHZlb2xpYS5jb20wGgYKKwYB
+BAGCpnIDAQQMDAowOTYzMTk3MjE1MB8GCisGAQQBgqZyAwIEEQwPRVJJQyBKRUFOIE1BUklPMBcG
+CisGAQQBgqZyAwMECQwHUElBWlpPTjARBgorBgEEAYKmcgMEBAMMAS4wIwYKKwYBBAGCpnIDBQQV
+DBNESVJFQ1RPUiBGSU5BTkNJRVJPMDQGCisGAQQBgqZyAwcEJgwkIEFWLiBST0RSSUdPIENIQVZF
+WiBHT05aQUxFWiBTT0xBUiA2MBwGCisGAQQBgqZyAwgEDgwMNTkzOTg3MTEwMDcxMBkGCisGAQQB
+gqZyAwkECwwJR1VBWUFRVUlMMEoGCisGAQQBgqZyAwoEPAw6SU5URVJOQVRJT05BTCBXQVRFUiBT
+RVJWSUNFUyAoR1VBWUFRVUlMKSBJTlRFUkFHVUEgQy4gTFREQTAdBgorBgEEAYKmcgMLBA8MDTA5
+OTIxNTM1NjMwMDEwFwYKKwYBBAGCpnIDDAQJDAdFQ1VBRE9SMBIGCisGAQQBgqZyAx0EBAwCTm8w
+HwYKKwYBBAGCpnIDIAQRDA8wMDEwMDIwMDAwNjQ2OTQwEwYKKwYBBAGCpnIDIQQFDANQRlgwEQYK
+KwYBBAGCpnIDIgQDDAEuMA0GCSqGSIb3DQEBCwUAA4ICAQBOtuVyCAEFY7YQrB+/kl6DSxZ6Gju3
+yiwPe6Pzp9W1VCK/L4NbKqdcJEYcDs/u4BQ2F75COkJypHqYgL4RnwMiS9XDMbTK8CeLJ0RiKGuc
+bKrAml+ozKb7CZ4zgLXa1SDijdF4eBYyuaElVFeGrc2VDoajN9ui/JhNyiJJyl6t/Hyglfpbc0pv
+BTxu0dtNnSfMt2kCFeLzFsaeBJzLYOwavmH4bZgygmVkFvEkzUzCcWXZNvfetTMsi0oOtnnkvOpS
+Suwhr5ytUzOgtF7CuBYMqSnbGVh6lN5vKo6YTGwbyya9/GW3zXseMuKlpcBspnjgEboyGSbL/O0n
+H7kubvmvC2y40q/wF6jMIaE36PiTs24haPlf/jlNoZ/Lr7wEcjKzmyvlnqNvqKH+3ErccPR0xKtG
+xJtCI1+65pSlGH8zi4fXvEehFY5t1q6Qq9kenh0cmBCdwWL1oSzQHg+8/ssAqkxKkCZFWNHtRQXl
+po1Lkh7gCg18aj0JLVIVSHllMPuo2F9JB9vAFKrUYjeSj6o99pZKha7+gfiavUdFqV3+ltHH6Mbd
+2BS5ouaTlFIsLnNBQr8JKyHZShIJ+udb9K3KJgzEOs5iC0pj7MCjtDvvkATgm3bkBZDXNPE+sN6f
+HJya3ZtYwJ6LnmvUDsR53Qpcxp6kqIlV2eKnBAm0rB8SbA==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+tAywG8c8faX2Tb7yG4nX6XVVnlRqmBWGwS4Qjp/qQCzsP1bZ5DdaNrwUUCQpFppPPLQI2P1+s2ZL
+T71JKBZLba6NcNr9OoYcH3fuvlq82jEekS+C6wY1LWmH90Xxm6SPOD0Hv5ERjipfl3XZCR2DEtR9
+iLJIU/gdxgtUzbg7L44bd4pkS7JcQ8LLgFr0LmnpcY6WjNkN+1oM9PsC+MMiM9Z+KY7WpXtOKQY6
+fVtWA5KO6RMyxmhIxJ1mOE7OBYfViwCCaXosiegtae9eqxs20pDFWlf7Ii214YxX9Fs9udlKHYIL
+nPCdHMCaOHereHLDcQ3OKLGmhHUBumwLheKh9w==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature661089-Object584409"><etsi:QualifyingProperties Target="#Signature661089"><etsi:SignedProperties Id="Signature661089-SignedProperties974491"><etsi:SignedSignatureProperties><etsi:SigningTime>2021-08-30T21:16:03-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>4D1OdzVoEljTEAjg5vzYzy38I88=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUBCA-1 SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A. 1,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1980571568</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-186590"><etsi:Description>comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante></autorizacion>
