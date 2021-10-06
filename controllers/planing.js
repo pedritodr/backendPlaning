@@ -1,3 +1,4 @@
+const path = require('path');
 const { response } = require('express');
 const { Planing } = require('../models');
 const { loadFileHelper } = require('../helpers');
@@ -81,11 +82,18 @@ const deletePlaning = async(req, res) => {
 
 }
 
+const downloadLog = async(req, res) => {
+    const { id } = req.params;
+    const downloadPath = path.join(__dirname, '../logs/', `planing-${id}.log`);
+    return res.download(downloadPath);
+}
+
 module.exports = {
     addPlaning,
     updatePlaning,
     deletePlaning,
     getPlaningById,
     getPlanings,
-    getPlaningsPage
+    getPlaningsPage,
+    downloadLog
 }

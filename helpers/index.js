@@ -4,6 +4,7 @@ const loadFile = require('./load-file');
 const logger = require('./log4');
 const typeDocumentHelper = require('./type-documet');
 const validatePage = require('./page-validate');
+const existFile = require('./exists-file');
 
 module.exports = {
     ...dbValidate,
@@ -11,5 +12,6 @@ module.exports = {
     ...loadFile,
     ...logger,
     ...typeDocumentHelper,
-    ...validatePage
+    ...validatePage,
+    ...existFile
 }
