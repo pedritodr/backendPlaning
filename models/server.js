@@ -3,7 +3,6 @@ const fileUpload = require('express-fileupload');
 const cors = require('cors');
 const { dbConnection } = require('../database/config');
 const cron = require('node-cron');
-const axios = require("axios");
 
 const { createToFileFtp } = require('../controllers/execute-planing')
 class Server {
