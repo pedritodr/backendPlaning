@@ -10,9 +10,9 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.paths = {
-            auth: 'app/api/auth',
-            planing: 'app/api/planing',
-            user: 'app/api/users',
+            auth: '/api/auth',
+            planing: '/api/planing',
+            user: '/api/users',
         }
 
         this.connectionDb();
