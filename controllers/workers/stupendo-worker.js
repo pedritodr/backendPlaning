@@ -22,6 +22,7 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
         const year = dateBegin.getFullYear();
         const typeDocumentHelper = searchTypeDocument(planing.document_type);
         for (const da of data) {
+            console.log(da)
             if (typeof da !== "undefined") {
                 const numberInvoice = da.numberDocument;
                 const numberDocumentSplit = numberInvoice.split('-');

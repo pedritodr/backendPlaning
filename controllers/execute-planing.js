@@ -40,6 +40,7 @@ const createToFileFtp = async() => {
         if (processToFtp.getActive() === 'init') {
             const planing = await Planing.findOne({ status: 0 }).sort({ time: 1 }).limit(1);
             if (planing) {
+                console.log('entro1')
                 processToFtp.setActive('process');
                 const dateProcess = new Date();
                 await Planing.findByIdAndUpdate(planing._id, { status: 1, date_process: dateProcess }, { new: true });
