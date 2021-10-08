@@ -6,7 +6,7 @@ const { validJwt, validateFields, validateFileExt } = require('../middlewares');
 
 const router = Router();
 
-router.get('/', getPlanings);
+router.get('/app/', getPlanings);
 
 router.get('/:id', [
     validJwt,
