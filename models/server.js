@@ -29,11 +29,10 @@ class Server {
     }
 
     cronJobs() {
-        //    cron.schedule('* * */1 * *', () => {
-        //     console.log('running a task every minute');
-        //      createToFileFtp();
-        //  });
-        createToFileFtp();
+        cron.schedule('* */1 * * *', () => {
+            console.log('running a task every hours');
+            createToFileFtp();
+        });
     }
 
     routers() {
