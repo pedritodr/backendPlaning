@@ -75,6 +75,7 @@ const createToFileFtp = async() => {
                 }, 5000);
 
                 const setIntervalFinish = setInterval(async() => {
+                    console.log('tasks pending:' + parseInt(pool.stats().pendingTasks))
                     if (parseInt(pool.stats().pendingTasks) == 0) {
                         clearInterval(setIntervalFinish);
                         const dateFinish = new Date();
