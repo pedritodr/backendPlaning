@@ -112,6 +112,7 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                                 const errorData = {
                                     level: "error",
                                     status: `Error en el documento`,
+                                    body_request: JSON.stringify(bodyParams),
                                     message: `ID DOCUMENTO ${da.numberDocument}`,
                                     error_message: `La factura no esta en el rango seleccionado ${dateBegin.toISOString().slice(0, 10)}-${dateEnd.toISOString().slice(0, 10)}`,
                                     date: new Date().toString(),
@@ -123,6 +124,7 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                             const errorData = {
                                 level: "error",
                                 status: `Error en el documento`,
+                                body_request: JSON.stringify(bodyParams),
                                 message: `ID DOCUMENTO ${da.numberDocument}`,
                                 error_message: JSON.stringify(resultPetition.data),
                                 date: new Date().toString(),
