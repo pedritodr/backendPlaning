@@ -23,6 +23,14 @@ router.get('/download/:id', [
     validateFields,
 ], downloadLog);
 
+router.get('/load-aws/:id', [
+    validJwt,
+    check('id', 'El ID no válido').isMongoId(),
+    check('id').custom(existsPlaning),
+    check('id').custom(existFile),
+    validateFields,
+], downloadLog);
+
 router.get('/paginate/:page', [
     validJwt,
     check('page', 'the page is required').not().isEmpty(),

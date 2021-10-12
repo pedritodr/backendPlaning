@@ -7,7 +7,7 @@ const AWS = require('aws-sdk');
 //HTTP CLIENT
 const axios = require("axios");
 const searchTypeDocument = require('../../helpers/type-documet');
-const logger = require('../../helpers/log4');
+const { logger, loggerLoad } = require('../../helpers/log4');
 const used = process.memoryUsage();
 
 const pushDocumentToFtp = async(data, planing, nameFolder) => {
@@ -16,7 +16,8 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
         const AWSBucket = "ec-stupendo-ia";
         AWS.config.loadFromPath('./s3_config.json');
         planing = JSON.parse(planing);
-        const log = logger(planing._id)
+        const log = logger(planing._id);
+        const logLoad = loggerLoad(planing._id);
         const dateBegin = new Date(planing.date_begin);
         const dateEnd = new Date(planing.date_end);
         const year = dateBegin.getFullYear();
@@ -78,6 +79,15 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                                     promise.then(
                                         function(data) {
                                             fs.unlinkSync(routePath);
+                                            const successData = {
+                                                level: "info",
+                                                status: `AWS Load file`,
+                                                message: `ID DOCUMENTO ${da.numberDocument}`,
+                                                date: new Date().toString(),
+                                                data_aws: data,
+                                                env: process.env.NODE_ENV,
+                                            };
+                                            log.info(JSON.stringify(successData));
                                             console.log(data)
                                             console.log("Successfully uploaded");
                                         },

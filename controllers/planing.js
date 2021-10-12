@@ -88,6 +88,12 @@ const downloadLog = async(req, res) => {
     return res.download(downloadPath);
 }
 
+const downloadLoad = async(req, res) => {
+    const { id } = req.params;
+    const downloadPath = path.join(__dirname, '../logs/', `load-${id}.log`);
+    return res.download(downloadPath);
+}
+
 module.exports = {
     addPlaning,
     updatePlaning,
@@ -95,5 +101,6 @@ module.exports = {
     getPlaningById,
     getPlanings,
     getPlaningsPage,
-    downloadLog
+    downloadLog,
+    downloadLoad
 }
