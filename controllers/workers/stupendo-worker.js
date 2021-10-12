@@ -20,6 +20,7 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
         const dateBegin = new Date(planing.date_begin);
         const dateEnd = new Date(planing.date_end);
         const year = dateBegin.toISOString().slice(0, 4);
+        console.log(year)
         const typeDocumentHelper = searchTypeDocument(planing.document_type);
         for (const da of data) {
             console.log(da)
@@ -86,7 +87,7 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                                                 data_aws: data,
                                                 env: process.env.NODE_ENV,
                                             };
-                                            log.info(successData);
+                                            log.info(JSON.stringify(successData));
                                             console.log(data)
                                             console.log("Successfully uploaded");
                                         },
@@ -99,7 +100,7 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                                                 date: new Date().toString(),
                                                 env: process.env.NODE_ENV,
                                             };
-                                            log.error(errorData);
+                                            log.error(JSON.stringify(errorData));
                                             return alert("There was an error uploading your file: ", err.message);
 
                                         }
