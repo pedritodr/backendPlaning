@@ -20,7 +20,7 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
         const dateBegin = new Date(planing.date_begin);
         const dateEnd = new Date(planing.date_end);
         const year = dateBegin.toISOString().slice(0, 4);
-        console.log(year)
+        console.log('year:' + year);
         const typeDocumentHelper = searchTypeDocument(planing.document_type);
         for (const da of data) {
             console.log(da)
