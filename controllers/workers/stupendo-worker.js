@@ -86,7 +86,7 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                                                 data_aws: data,
                                                 env: process.env.NODE_ENV,
                                             };
-                                            log.info(JSON.stringify(successData));
+                                            log.info(successData);
                                             console.log(data)
                                             console.log("Successfully uploaded");
                                         },
@@ -99,7 +99,7 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                                                 date: new Date().toString(),
                                                 env: process.env.NODE_ENV,
                                             };
-                                            log.error(JSON.stringify(errorData));
+                                            log.error(errorData);
                                             return alert("There was an error uploading your file: ", err.message);
 
                                         }
