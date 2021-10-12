@@ -7,7 +7,7 @@ const AWS = require('aws-sdk');
 //HTTP CLIENT
 const axios = require("axios");
 const searchTypeDocument = require('../../helpers/type-documet');
-const { logger, loggerLoad } = require('../../helpers/log4');
+const logger = require('../../helpers/log4');
 const used = process.memoryUsage();
 
 const pushDocumentToFtp = async(data, planing, nameFolder) => {
@@ -17,10 +17,9 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
         AWS.config.loadFromPath('./s3_config.json');
         planing = JSON.parse(planing);
         const log = logger(planing._id);
-        const logLoad = loggerLoad(planing._id);
         const dateBegin = new Date(planing.date_begin);
         const dateEnd = new Date(planing.date_end);
-        const year = dateBegin.getFullYear();
+        const year = dateBegin.toISOString().slice(0, 4);
         const typeDocumentHelper = searchTypeDocument(planing.document_type);
         for (const da of data) {
             console.log(da)
@@ -37,7 +36,7 @@ const pushDocumentToFtp = async(data, planing, nameFolder) => {
                         NombreArchivo: `${typeDocumentHelper.document}-${da.numberDocument}`,
                         Xml: planing.output_format === 1 ? true : false,
                         Pdf: planing.output_format === 2 ? true : false,
-                        AnioDocumento: year.toString()
+                        AnioDocumento: year
                     };
 
                     const resultPetition = await axios.post(
