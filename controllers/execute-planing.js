@@ -5,6 +5,7 @@ const fs = require('fs');
 const results = [];
 //WORKER POOL(NODE WORKER_THREAD)
 const workerPool = require("workerpool");
+require('events').EventEmitter.defaultMaxListeners = 25;
 class ProcessToFtp {
 
     static instance;
