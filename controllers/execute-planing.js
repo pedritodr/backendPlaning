@@ -30,7 +30,7 @@ const pool = workerPool.pool(
     path.resolve(__dirname) + "/workers/stupendo-worker.js", {
         maxWorkers: parseInt(process.env.MAX_WORKERS),
         workerType: "thread",
-        maxQueueSize: 1000,
+        /*   maxQueueSize: 1000, */
     }
 );
 
@@ -53,12 +53,15 @@ const createToFileFtp = async() => {
                     .on('data', (data) => results.push(data))
                     .on('end', async() => {
                         let arrayChunked = results.length > 0 ? await chunkArray(results, 50) : [];
-                        for (const data of arrayChunked) {
+                        for (const [index, data] of arrayChunked.entries()) {
+                            console.time('worker' + index)
                             try {
                                 if (typeof data !== "undefined" && data.length > 0) {
                                     pool
                                         .exec("pushDocumentToFtp", [data, JSON.stringify(planing), nameFolder])
-                                        .then(function(result) {})
+                                        .then(function(result) {
+                                            console.timeEnd('worker' + index)
+                                        })
                                         .catch(function(err) {
                                             console.log(err);
                                         });
