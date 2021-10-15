@@ -29,7 +29,7 @@ class Server {
     }
 
     cronJobs() {
-        cron.schedule('* 1 * * *', () => {
+        cron.schedule('* */58 * * *', () => {
             console.log('running a task every hours');
             createToFileFtp();
         });
